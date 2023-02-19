@@ -1,0 +1,25 @@
+.description {
+  position: absolute;
+  height: fit-content;
+  width: 100%;
+  //   background: white;
+  margin-top: -10rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-box {
+    width: 30rem;
+    // background: rgb(95, 95, 95);
+    background: rgba(245, 245, 245, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.168);
+    color: rgb(40, 40, 40);
+    p {
+      font-family: 300;
+      font-style: italic;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "./animation";
+.backdrop {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.modal-overlay {
+  //   height: 20rem;
+  height: fit-content;
+  padding: 1rem;
+  width: 40rem;
+  border-radius: 10px;
+  background: rgba(245, 245, 245, 0.9);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.168);
+  z-index: 3;
+  animation-name: modal-effect;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
+
+.total-amount {
+  font-weight: 700;
+  color: #24c87b;
+  font-size: 1.2rem;
+  span {
+    color: rgb(63, 63, 63);
+    font-weight: 700;
+  }
+}
+
+.decision {
+  display: flex;
+  justify-content: flex-end;
+  & > * {
+    margin: 0 0.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    font-size: 1.02rem;
+  }
+  button:nth-child(1) {
+    color: #24c87b;
+    border: 3px solid #24c87b;
+  }
+  button:nth-child(2) {
+    background: #24c87b;
+    color: white;
+  }
+}

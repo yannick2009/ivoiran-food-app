@@ -1,14 +1,14 @@
 import React from "react";
-import HeaderCartBtn from "./HeaderCartBtn";
-import "./sass/Header.scss";
+import HeaderCartBtn from "../UI/HeaderCartBtn";
+import "../sass/Header.scss";
+import HeaderLogo from "../UI/HeaderLogo";
 
-
-const Header = () => {
+const Header = (props) => {
   return (
     <header className="header">
       <nav className="header-nav">
-        <p></p>
-        <HeaderCartBtn></HeaderCartBtn>
+        <HeaderLogo />
+        <HeaderCartBtn onClick={props.onShowCart} />
       </nav>
       <div className="header-sub"></div>
     </header>

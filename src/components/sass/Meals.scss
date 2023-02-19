@@ -1,0 +1,107 @@
+.meals {
+  width: 100%;
+  height: fit-content;
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-box {
+    // background: rgb(95, 95, 95);
+    background: rgba(245, 245, 245, 0.713);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    width: 60rem;
+    height: fit-content;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    list-style: none;
+  }
+}
+
+.meal-item {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr;
+  background: whitesmoke;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  &-1 {
+    width: 100%;
+    height: 100%;
+    background: grey;
+    overflow: hidden;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    &__info {
+      & > * {
+        margin: 0.7rem 0;
+      }
+      &-name {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        color: #ff8800;
+        // color: #24c87b;
+      }
+      &-description {
+        font-size: 1rem;
+        font-weight: 300;
+        font-style: italic;
+        color: grey;
+      }
+      &-price {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.meal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &>*{
+    margin: .5rem 0;
+  }
+  &__amount {
+    input {
+      width: 6.2rem;
+      padding: .5rem;
+      border: 0;
+      border-radius: 5px;
+      outline: 3px solid #ff8800;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+  }
+  &__submit {
+    button {
+      padding: .7rem 1.5rem;
+      border-radius: 5px;
+      border: 0;
+      background: #24c87b;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+      &:active {
+        filter: brightness(1.1);
+        // background: #ff8800;
+      }
+    }
+  }
+}
