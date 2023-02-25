@@ -1,8 +1,10 @@
+@import "./animation";
+
 .btn_header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
   border: 0;
   font-size: 1.1rem;
@@ -29,4 +31,11 @@
     padding: 0.5rem 1rem;
     border-radius: 100px;
   }
+}
+
+.bump {
+  animation-name: bump;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }

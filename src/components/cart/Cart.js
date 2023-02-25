@@ -7,7 +7,13 @@ import CartContext from "../../context/cart-context";
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
   const cartItems = cartCtx.items.map((item) => (
-    <CartItem name={item.name} price={item.price} amount={item.amount} />
+    <CartItem
+      key={item.id}
+      id={item.id}
+      name={item.name}
+      price={item.price}
+      amount={item.amount}
+    />
   ));
   return (
     <Fragment>
